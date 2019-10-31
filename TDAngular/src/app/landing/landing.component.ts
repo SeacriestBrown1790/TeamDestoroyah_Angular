@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-
 @Component({
-  selector: 'app-loggedin',
-  templateUrl: './loggedin.component.html',
-  styleUrls: ['./loggedin.component.scss']
+  selector: 'app-landing',
+  templateUrl: './landing.component.html',
+  styleUrls: ['./landing.component.scss']
 })
-export class LoggedinComponent implements OnInit {
+export class LandingComponent implements OnInit {
 
   constructor(private _activatedRoute: ActivatedRoute,
     private _router: Router) { }
@@ -15,8 +14,14 @@ export class LoggedinComponent implements OnInit {
   ngOnInit() {
   }
 
-  onLogInButtonClick(): void{
-    this._router.navigate(['wall'])
+  onLandingButtonClick(): void{
+    this._router.navigate(['login'])
   }
 
 }
+
+
+
+
+
+
