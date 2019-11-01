@@ -1,12 +1,21 @@
 
 <div class="text-light" id="navbardiv">
 
-    <button type="button" class="pad btn btn-light">Search</button>
+    
     <p></p><br>
-    <button type="button" class="pad btn btn-light">Settings</button>
-    <p></p><br>
-    <button type="button" class="pad btn btn-light">Log Out</button>
+    <div class="button_container">
        
+        <button (click)="onSettingsButtonClick()" class="btn"><span>Settings</span></button>
+     
+    </div>
+    <p></p><br>
+    <div class="button_container">
+        <p></p><br>
+        <p></p><br>
+        <p></p><br>
+        <button (click)="onExitButtonClick()" class="btn"><span>Log Out</span></button>
+     
+    </div>
    
     
     </div>    
@@ -49,22 +58,6 @@ Hello User
 </div>
 
 <div id="wallpostsection">
-    <form>
-        <div id="postwords" class="form-group">
-        
-            <label for="exampleFormControlTextarea1">Lets post something...(words)</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" ></textarea>
-         
-        </div>
-
-        <div id="postimage" class="form-group">
-        
-    
-                <input type="file" class="custom-file-input" width="200px" id="customFile">
-                <label class="custom-file-label" for="customFile">Choose file</label>
    
-      
-        </div>
-    </form>
 </div>
 

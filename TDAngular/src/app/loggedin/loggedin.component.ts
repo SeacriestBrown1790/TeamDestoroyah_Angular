@@ -19,4 +19,8 @@ export class LoggedinComponent implements OnInit {
     this._router.navigate(['wall'])
   }
 
+  onRegisterButtonClick(): void{
+    this._router.navigate(['register'])
+  }
+
 }

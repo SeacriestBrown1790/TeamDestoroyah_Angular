@@ -7,23 +7,32 @@ import { LoggedinComponent } from './loggedin/loggedin.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RegisterComponent } from './register/register.component';
 import { LandingComponent } from './landing/landing.component';
-//import { WallComponent } from './wall/wall.component';
+import {SlideshowModule} from 'ng-simple-slideshow';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 
 
 @NgModule({
+ 
   declarations: [
+    
     AppComponent,
     LoggedinComponent,
     NavbarComponent,
     RegisterComponent,
     routingComponents,
-    LandingComponent
+    LandingComponent,
+
+    
   ],
   imports: [
+    
+    NgbModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SlideshowModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
