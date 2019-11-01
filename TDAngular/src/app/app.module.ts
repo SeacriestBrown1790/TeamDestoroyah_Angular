@@ -9,6 +9,9 @@ import { RegisterComponent } from './register/register.component';
 import { LandingComponent } from './landing/landing.component';
 import {SlideshowModule} from 'ng-simple-slideshow';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
+
 
 
 
@@ -27,12 +30,12 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     
   ],
   imports: [
-    
+    HttpClientModule,
     NgbModule,
     BrowserModule,
     AppRoutingModule,
     SlideshowModule,
-
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
