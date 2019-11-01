@@ -1,0 +1,254 @@
+#wall{
+    margin-left: 278px; 
+    width: 1100px; 
+    background-color: #242222; 
+    min-height: 100%; 
+    position: absolute; 
+    margin-top: 100px;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    overflow: hidden;
+}
+
+#wallprofilesection{
+    
+    background-color: #242222;
+    position: relative;
+    width: 100%;
+    height: 250px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+#profilebanner{
+    background-color:#242222;
+    border-radius: 20px;
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    background-attachment: fixed;
+    background-image:url('https://i.imgur.com/66fcp.jpg');
+    background-size: 1300px auto;
+    background-position: 48% 36%;
+
+    
+
+}
+
+#userpic{
+    background-color: rgb(8, 8, 19);
+    border-radius: 20px;
+    position: absolute;
+    height: 70%;
+    width: 200px;
+    margin-left: 100px;
+    margin-top: 75px;
+    border: 5px solid white;
+
+    background-attachment: fixed;
+    background-image:url('https://media.alienwarearena.com/media/1e509bae64edb6ad30140c031d854109.jpg');
+    background-size: 200px auto;
+    background-position: 0 143px;
+    
+    
+}
+
+#wallpostsection{
+    border-radius: 20px;
+    background-attachment: fixed;
+    background-image:url('https://img5.goodfon.com/wallpaper/nbig/e/a2/tekstura-fon-chernyi-seryi-zheltyi-linii-background.jpg');
+    background-size:   80% auto;
+    background-position: 50% 50%;
+    background-color: #242222;
+    position: relative;
+    width: 1070px;
+    height: 900px;
+    padding: 10px;
+    overflow: hidden;
+    overflow-y: scroll;
+    margin-left: 10px;
+    margin-right: 10px;
+  
+}
+
+#postwords{
+
+    background-color: #d3d0d0;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    margin:0;
+    resize: vertical;
+  overflow: auto;
+  overflow: hidden;
+  margin-bottom: 10px;
+    
+}
+
+#postimage{
+
+    background-color: #d3d0d0;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding: 0px;
+    border-radius: 10px;
+    padding-top:10px;
+  
+  overflow: auto;
+  overflow: hidden;
+  margin-bottom: 10px;
+
+}
+
+// nav bar areas:
+
+#navbardiv{
+    padding-top: 150px;
+    background-color: green; 
+    width: 150px;
+    min-height:100%;
+    position: absolute;
+    background-attachment: fixed;
+    background-image:url('https://designshack.net/wp-content/uploads/black-texture-background.jpg');
+    background-size: auto;
+    background-position: 50% 50%;
+    background-color: rgb(36, 34, 34);
+    background-color: rgb(36, 34, 34);
+    border-right: 5px solid black;
+}
+
+.pad{
+    margin-left: 20px;
+}
+#navbardivtop{
+    background-color: green; 
+    height: 100px;
+    min-width:100%;
+    position: absolute;
+    background-attachment: fixed;
+    background-image:url('https://designshack.net/wp-content/uploads/black-texture-background.jpg');
+    background-size: auto;
+    background-position: 50% 50%;
+    background-color: rgb(36, 34, 34);
+    border-bottom: 5px solid black;
+
+}
+
+#userplaceholder{
+    position:absolute;
+    padding-top: 20px;
+    padding-left: 40px;
+    font-weight: bolder;
+    display: inline-block;
+    font-size: 20px;
+    color: rgb(132, 218, 203);
+}
+
+#logo{
+    display: inline-block;
+    width: 74px;
+    height: 64px;
+    background-color: black;
+    margin-left: 35px;
+    margin-top: 10px;
+    background-attachment: fixed;
+    background-image:url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e9b85669-4546-40b0-8a43-7bc3f1b666dd/dbev91b-c832b73c-cdcd-4e09-81e6-f4415877b2f4.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2U5Yjg1NjY5LTQ1NDYtNDBiMC04YTQzLTdiYzNmMWI2NjZkZFwvZGJldjkxYi1jODMyYjczYy1jZGNkLTRlMDktODFlNi1mNDQxNTg3N2IyZjQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.DbVTrVy2ZqcId2BGcMYuaBK5us6ohNsPLxec5PUnW3M');
+    background-size: 310px 320px;
+    background-position: 34.5% 44%;
+    background-color: rgb(36, 34, 34);
+}
+
+#navsearch{
+    display: inline-block;
+    float: right;
+    margin-right: 168px;
+    margin-top: 20px;
+}
+
+// button only 
+
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+body {
+    margin: 0;
+    height: 100%;
+    background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.button_container {
+    position: absolute;
+  left: 0px;
+  top: 30%;
+  width: 200px;
+  padding-left: 20px;
+}
+
+.description, .link {
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+}
+
+.description {
+    font-size: 60px;
+    font-weight: bolder;
+    color: azure;
+}
+
+.btn {
+  border: none;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #222;
+  padding: 17px 50px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+}
+
+.btn span {
+  position: relative; 
+  z-index: 1;
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 490%;
+  width: 140%;
+  background: #4a0000;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.btn:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+.link {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.link a {
+  color: #000;
+  font-size: 25px; 
+}
