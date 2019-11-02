@@ -58,14 +58,14 @@ Hello User
 </div>
 
 <div id="wallpostsection">
-    <form #Serv=ngForm (ngSubmit)="submission(serv)">
+    <form #serv=ngForm (ngSubmit)="submission(serv)">
         <div id="postwords" class="form-group">
         
             <label for="exampleFormControlTextarea1">Lets post something...(words)</label>
             
             <textarea name="content" class="form-control" id="exampleFormControlTextarea1" ngModel></textarea>
 <br>
-            <button style="padding-bottom: 10px; padding-top: 10px;" (click)="onSettingsButtonClick()" class="btn"><span>Submit</span></button>
+<input type="submit" style="padding-bottom: 10px; padding-top: 10px;" class="btn" value="Submit">
         
         </div>
     </form>   
