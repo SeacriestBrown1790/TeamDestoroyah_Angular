@@ -9,25 +9,25 @@
 
         <div class="form-group col-xs-2 text-white">
           <label for="username">User Name</label>
-          <input type="text" style="max-width: 250px;" class="form-control col-xs-2" id="username" aria-describedby="usernameHelp" placeholder="Enter username" name="username" ngModel>
+          <input (click)="changeColor()" type="text" style="max-width: 250px;" class="lines form-control col-xs-2" id="username" aria-describedby="usernameHelp" required placeholder="Enter username"  name="username" ngModel>
           <small id="usernameHelp" class="form-text text-muted">Go for something that scream "you."</small>
         </div>
 
         <div class="form-group col-xs-2 text-white">
             <label for="firstname">First Name</label>
-            <input type="text" style="max-width: 250px;" class="form-control col-xs-2" id="firstName" aria-describedby="firstHelp" placeholder="Enter your name" name="firstname" ngModel>
+            <input (click)="changeColor1()" type="text" style="max-width: 250px;" class="form-control col-xs-2 lines" id="firstName" aria-describedby="firstHelp" placeholder="Enter your name" name="firstname" ngModel>
             
           </div>
 
         <div class="form-group col-xs-2 text-white">
             <label for="lastname">Last Name</label>
-            <input type="text" style="max-width: 250px;" class="form-control col-xs-2" id="lastname" placeholder="Last name" name="lastname" ngModel>
+            <input (click)="changeColor2()" type="text" style="max-width: 250px;" class="form-control col-xs-2 lines" id="lastname" placeholder="Last name" name="lastname" ngModel>
             
           </div>  
 
           <div class="form-group text-white">
             <label for="exampleSelect1">Example select</label>
-            <select class="form-control" id="gender" name="gender" ngModel>
+            <select (click)="changeColor4()"  class="form-control lines" id="gender" name="gender" ngModel>
               <option>Male</option>
               <option>Female</option>
               <option>Other</option>
@@ -42,24 +42,24 @@
 <div id="loginright">
     <div class="form-group col-xs-2 text-white">
         <label for="exampleInputEmail1">Birth Day</label>
-        <input type="date" style="max-width: 250px;" class="form-control col-xs-2" id="birthday"  placeholder="Enter Birthday" name="brithday" ngModel>
+        <input type="date" style="max-width: 250px;" class="form-control col-xs-2 lines" (click)="changeColor5()" id="birthday"  placeholder="Enter Birthday" name="brithday" ngModel>
        
       </div>
 
       <div class="form-group col-xs-2 text-white">
         <label for="exampleInputEmail">Email address</label>
-        <input type="email" style="max-width: 250px;" class="form-control col-xs-2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" ngModel>
+        <input (click)="changeColor7()" type="email" style="max-width: 250px;" class="form-control col-xs-2 lines" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" ngModel>
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
 
       <div class="form-group col-xs-2 text-white">
         <label for="exampleInputPassword1">Password</label>
-        <input style="max-width: 250px;" type="password" class="form-control col-xs-2" id="exampleInputPassword1" placeholder="Password" name="password" ngModel>
+        <input (click)="changeColor3()" style="max-width: 250px;" type="password" required class="form-control col-xs-2 lines" id="exampleInputPassword1" placeholder="Password" name="password" ngModel>
       </div>
    
  
             <p></p><br>
-            <input type="submit" class="btn btn-light" value="Submit">
+            <div ><input type="submit" class="btn btn-light" value="Submit"></div>
          
     
     </div>
