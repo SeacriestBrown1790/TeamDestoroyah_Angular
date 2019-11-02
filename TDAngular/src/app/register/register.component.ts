@@ -23,16 +23,16 @@ export class RegisterComponent implements OnInit {
     this.http
       .post("http://localhost:8080/TeamDestoroyah/users/putIn.app", {
         username: form.value.username,
-        userpass: form.value.userpass,
+        password: form.value.password,
         age: form.value.age,
         gender: form.value.gender,
-        bithday: form.value.birthday,
+        brithday: form.value.brithday,
         firstname: form.value.firstname,
         lastname: form.value.lastname,
         email: form.value.email 
       })
       .toPromise()
-      .then((r: { username: string; userpass: string;age: number; gender: string; birthday: Date; firstname: string;lastname: string;email: string }) => {
+      .then((r: { username: string; password: string;age: number; gender: string; brithday: Date; firstname: string;lastname: string;email: string }) => {
         console.log(r);
         sessionStorage.setItem("username", JSON.stringify(r));
       })
