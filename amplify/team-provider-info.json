@@ -1,0 +1,19 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-teamdestoroyahangula-dev-225137-authRole",
+            "UnauthRoleArn": "arn:aws:iam::069041202010:role/amplify-teamdestoroyahangula-dev-225137-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::069041202010:role/amplify-teamdestoroyahangula-dev-225137-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-teamdestoroyahangula-dev-225137-deployment",
+            "UnauthRoleName": "amplify-teamdestoroyahangula-dev-225137-unauthRole",
+            "StackName": "amplify-teamdestoroyahangula-dev-225137",
+            "StackId": "arn:aws:cloudformation:us-east-2:069041202010:stack/amplify-teamdestoroyahangula-dev-225137/5b0c39d0-fb89-11e9-a619-02ba814fbd16"
+        },
+        "categories": {
+            "auth": {
+                "teamdestoroyahangula03193759": {}
+            }
+        }
+    }
+}

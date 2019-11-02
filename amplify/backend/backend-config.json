@@ -1,0 +1,26 @@
+{
+	"auth": {
+		"teamdestoroyahangula03193759": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	},
+	"api": {
+		"teamdestoroyahangula": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
+						"userPoolConfig": {
+							"userPoolId": "authteamdestoroyahangula03193759"
+						}
+					}
+				}
+			}
+		}
+	}
+}
