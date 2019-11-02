@@ -35,10 +35,11 @@ export class RegisterComponent implements OnInit {
       .toPromise()
       .then((r: { username: string; password: string;age: number; gender: string; brithday: Date; firstname: string;lastname: string;email: string }) => {
         console.log(r);
-        sessionStorage.setItem("username", JSON.stringify(r));
+        // sessionStorage.setItem("username", JSON.stringify(r));
         this.onRegisterButtonClick();
       })
       .catch(e => console.log(e));
+      
       
   }
 
