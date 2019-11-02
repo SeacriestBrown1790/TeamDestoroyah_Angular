@@ -7,10 +7,12 @@ import { LoggedinComponent } from './loggedin/loggedin.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RegisterComponent } from './register/register.component';
 import { LandingComponent } from './landing/landing.component';
-import {SlideshowModule} from 'ng-simple-slideshow';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {HttpClientModule} from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
+import { SlideshowModule} from 'ng-simple-slideshow';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -30,6 +32,7 @@ import {FormsModule} from '@angular/forms';
     
   ],
   imports: [
+    ReactiveFormsModule,
     HttpClientModule,
     NgbModule,
     BrowserModule,
