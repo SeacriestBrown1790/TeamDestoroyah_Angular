@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
     this.http
       .post("http://localhost:8080/TeamDestoroyah/users/putIn.app", {
         username: form.value.username,
-        password: form.value.password,
+        userpass: form.value.userpass,
         age: form.value.age,
         gender: form.value.gender,
         birthday: form.value.birthday,
@@ -35,7 +35,7 @@ export class RegisterComponent implements OnInit {
         email: form.value.email 
       })
       .toPromise()
-      .then((r: { username: string; password: string;age: number; gender: string; birthday: Date; firstname: string;lastname: string;email: string }) => {
+      .then((r: { username: string; userpass: string;age: number; gender: string; birthday: Date; firstname: string;lastname: string;email: string }) => {
         console.log(r);
         // sessionStorage.setItem("username", JSON.stringify(r));
         this.onRegisterButtonClick();
