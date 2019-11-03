@@ -22,7 +22,20 @@
           <input style="max-width: 200px;" type="password" class="form-control col-xs-2" id="password" placeholder="Password" name="password" ngModel>
         </div>
         
-        <input type="submit" class="btn btn-primary col-xs-2" value="submit">
+        
+
+
+
+         <div class="button_container" >
+
+       
+
+                <button class="btn" style="width: 200px; margin-top: 200px; margin-left: -389px;"><span><input type="submit"
+                  style="background-color: transparent; border: none"
+                  class="" value="">Log In</span></button>
+     
+            </div>
+
       </form>
 
 </div>
@@ -32,7 +45,17 @@
     
     <form class="col-xs-2">
             
-            <input type="submit" (click)="onRegisterButtonClick()" class="btn btn-primary" value="submit">
+      <div class="button_container" >
+
+       
+
+        <button class="btn" (click)="onRegisterButtonClick()" style="width: 200px; margin-top: 100px; margin-left: -30px;"><span><input type="submit"
+          style="background-color: transparent; border: none"
+          class="" value="">Sign Up</span></button>
+
+    </div>
+
+            
           </form>
     
     </div>
