@@ -27,13 +27,13 @@ export class RegisterComponent implements OnInit {
         password: form.value.password,
         age: form.value.age,
         gender: form.value.gender,
-        brithday: form.value.brithday,
+        birthday: form.value.birthday,
         firstname: form.value.firstname,
         lastname: form.value.lastname,
         email: form.value.email 
       })
       .toPromise()
-      .then((r: { username: string; password: string;age: number; gender: string; brithday: Date; firstname: string;lastname: string;email: string }) => {
+      .then((r: { username: string; password: string;age: number; gender: string; birthday: Date; firstname: string;lastname: string;email: string }) => {
         console.log(r);
         // sessionStorage.setItem("username", JSON.stringify(r));
         this.onRegisterButtonClick();

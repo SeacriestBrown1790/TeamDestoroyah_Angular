@@ -38,7 +38,7 @@ export class LoggedinComponent implements OnInit {
       .toPromise()
       .then((r: { email: string;password: string }) => {
         console.log(r);
-        sessionStorage.setItem("email", JSON.stringify(r));
+        sessionStorage.setItem("user", JSON.stringify(r));
         if(r!=null){
           this.onLogInButtonClick();
         }
