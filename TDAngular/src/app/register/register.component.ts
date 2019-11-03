@@ -20,6 +20,8 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
 
+  
+
   submission(form: NgForm) {
     this.http
       .post("http://localhost:8080/TeamDestoroyah/users/putIn.app", {
