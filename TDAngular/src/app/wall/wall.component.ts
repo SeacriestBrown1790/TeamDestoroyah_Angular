@@ -4,6 +4,7 @@ import { NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 
+
 @Component({
   selector: 'app-wall',
   templateUrl: './wall.component.html',
@@ -39,5 +40,7 @@ export class WallComponent implements OnInit {
   onExitButtonClick(): void{
     this._router.navigate(['landing'])
   }
+
+
 
 }
