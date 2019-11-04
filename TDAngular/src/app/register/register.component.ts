@@ -9,7 +9,18 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
+
+
 export class RegisterComponent implements OnInit {
+
+
+
+  
+
+
+
+ 
+
 
   constructor( private http:HttpClient,
     private _activatedRoute: ActivatedRoute,
@@ -20,9 +31,13 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
 
+
   
 
   submission(form: NgForm) {
+    
+     
+
     this.http
       .post("http://localhost:8080/TeamDestoroyah/users/putIn.app", {
         username: form.value.username,
@@ -44,6 +59,10 @@ export class RegisterComponent implements OnInit {
       
       
   }
+
+    
+
+ 
 
   onRegisterButtonClick(): void{
     this._router.navigate(['login'])
