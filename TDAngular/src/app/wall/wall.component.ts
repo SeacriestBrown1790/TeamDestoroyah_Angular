@@ -17,10 +17,14 @@ export class WallComponent implements OnInit {
     private http:HttpClient,
     ) { }
 
+name : string = JSON.parse(sessionStorage.getItem("user")).username;
+myId: String = JSON.parse(sessionStorage.getItem("user")).user_id; 
   ngOnInit() {
   }
   getUser(){
-  let user = {
+  
+  
+    let user = {
   user_id: JSON.parse(sessionStorage.getItem("user")).user_id,
   firstname: JSON.parse(sessionStorage.getItem("user")).firstname,
   lastname: JSON.parse(sessionStorage.getItem("user")).lastname,
@@ -46,7 +50,7 @@ export class WallComponent implements OnInit {
         id: 1,
       // },
       user: JSON.parse(sessionStorage.getItem("user")),
-      // user_id: JSON.parse(sessionStorage.getItem("user")).user_id,
+      //user_id: JSON.parse(sessionStorage.getItem("user")).user_id,
       // firstname: JSON.parse(sessionStorage.getItem("user")).firstname,
       // lastname: JSON.parse(sessionStorage.getItem("user")).lastname,
       // username: JSON.parse(sessionStorage.getItem("user")).username,
