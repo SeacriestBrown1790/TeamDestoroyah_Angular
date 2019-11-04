@@ -43,7 +43,7 @@ export class WallComponent implements OnInit {
         content: form.value.content,
         
         date: this.currentDate(),
-        id: 1,
+        
       // },
       user: JSON.parse(sessionStorage.getItem("user")),
       // user_id: JSON.parse(sessionStorage.getItem("user")).user_id,
@@ -60,7 +60,7 @@ export class WallComponent implements OnInit {
 
     })
     .toPromise()
-    .then((r: {/*user_id:number;firstname:string;lastname:string;username:string;birthday:Date;gender:string;email:string;*/content:string;date:Date;id:number;user:object}) => {
+    .then((r: {/*user_id:number;firstname:string;lastname:string;username:string;birthday:Date;gender:string;email:string;*/content:string;date:Date;user:object}) => {
       console.log(r);
     })
     .catch(e => console.log(e));
