@@ -132,10 +132,13 @@ ShowHideButton2() {
   itsWut(obj){
   
     for(let product of obj){
-     let x = product.content+" "+product.date;
+      console.log(product);
+      // let id = JSON.parse(sessionStorage.getItem("user")).user_id;
+      let x = product.content+" "+product.date;
+      // if(product.id==id){
     	
-     document.getElementById("tickets").innerHTML = x; 
-     
+     document.getElementById("tickets").innerHTML += x + "</br>"; 
+      // }
      }
     }
 
