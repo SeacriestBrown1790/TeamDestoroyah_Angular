@@ -19,11 +19,11 @@ export class WallComponent implements OnInit {
 
 name : string = JSON.parse(sessionStorage.getItem("user")).username;
 myId: String = JSON.parse(sessionStorage.getItem("user")).user_id; 
+
   ngOnInit() {
+    this.getMyPosts();
   }
   getUser(){
-  
-  
     let user = {
   user_id: JSON.parse(sessionStorage.getItem("user")).user_id,
   firstname: JSON.parse(sessionStorage.getItem("user")).firstname,
@@ -39,32 +39,19 @@ myId: String = JSON.parse(sessionStorage.getItem("user")).user_id;
 
 
   
-  
   submission(form: NgForm) {
     this.http
     .post("http://localhost:8080/TeamDestoroyah/users/postIn.app", {
-      // post: {
+      
         content: form.value.content,
         
         date: this.currentDate(),
         
-      // },
       user: JSON.parse(sessionStorage.getItem("user")),
-      //user_id: JSON.parse(sessionStorage.getItem("user")).user_id,
-      // firstname: JSON.parse(sessionStorage.getItem("user")).firstname,
-      // lastname: JSON.parse(sessionStorage.getItem("user")).lastname,
-      // username: JSON.parse(sessionStorage.getItem("user")).username,
-      // birthday: JSON.parse(sessionStorage.getItem("user")).birthday,
-      // gender: JSON.parse(sessionStorage.getItem("user")).gender,
-      // email: JSON.parse(sessionStorage.getItem("user")).email,
-      // post: JSON.parse(sessionStorage.getItem("user")).post,
-      
-
-
-
+     
     })
     .toPromise()
-    .then((r: {/*user_id:number;firstname:string;lastname:string;username:string;birthday:Date;gender:string;email:string;*/content:string;date:Date;user:object}) => {
+    .then((r: {content:string;date:Date;user:object}) => {
       console.log(r);
     })
     .catch(e => console.log(e));
@@ -78,8 +65,6 @@ myId: String = JSON.parse(sessionStorage.getItem("user")).user_id;
 
  
   addPost() {
-    
-    
     let user= JSON.parse(sessionStorage.getItem("user"));
     console.log(user);
     
@@ -88,6 +73,23 @@ myId: String = JSON.parse(sessionStorage.getItem("user")).user_id;
       
     return user
   }
+
+  getMyPosts() {
+    this.http
+    .post("http://localhost:8080/TeamDestoroyah/post/getAll.app", {
+        
+      // id: JSON.parse(sessionStorage.getItem("user")).user_id,
+     
+    })
+    .toPromise()
+    .then((r: {}) => {
+      console.log(r);
+    })
+    .catch(e => document.getElementById('inc').innerHTML+=e);
+    
+  }
+
+
   
 
   getPhotoTemp() {
@@ -103,6 +105,7 @@ myId: String = JSON.parse(sessionStorage.getItem("user")).user_id;
 
   onExitButtonClick(): void{
     this._router.navigate(['landing'])
+    sessionStorage.clear();
   }
 
 
