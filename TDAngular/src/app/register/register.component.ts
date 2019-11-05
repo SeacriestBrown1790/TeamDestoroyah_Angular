@@ -60,7 +60,14 @@ export class RegisterComponent implements OnInit {
       
   }
 
-    
+  onClickPhoto(): void{
+    var x = document.getElementById("Post");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+} 
 
  
 

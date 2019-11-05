@@ -58,8 +58,30 @@ Hello {{name}} <br/><span style="font-weight: bolder; color: crimson;">Member # 
 </div>
 
 <div id="wallpostsection">
-    <form #serv=ngForm (ngSubmit)="submission(serv)">
+
         <div id="postwords" class="form-group">
+
+                <input type="submit" style="padding-bottom: 10px; padding-top: 10px; display: inline-block; width: 100%;
+                 padding-bottom: 10px;" (click)="ShowHideButton()" 
+                class="btn" value="Post">
+                <br><p></p>
+                
+                <input type="submit" style="padding-bottom: 10px; padding-top: 10px; display: inline-block; width: 100%;
+                padding-bottom: 10px;" 
+                class="btn" value="Photo" (click)="ShowHideButton1()">
+                <br><p></p>
+                
+                <input type="submit" style="padding-bottom: 10px; padding-top: 10px; display: inline-block; width: 100%;
+                padding-bottom: 10px;" 
+                class="btn" value="Video" (click)="ShowHideButton2()">
+    
+            </div>
+
+
+    <form #serv=ngForm (ngSubmit)="submission(serv)">
+        
+        
+        <div *ngIf="!showMainContent" id="postwords" class="form-group">
         
             <label for="exampleFormControlTextarea1">Lets post something...(words)</label>
             
@@ -69,12 +91,22 @@ Hello {{name}} <br/><span style="font-weight: bolder; color: crimson;">Member # 
         
         </div>
         
-        <div id="postimage" class="form-group">
+        <div *ngIf="!showMainContent1" id="postimage" class="form-group">
         
     
             <input type="file" class="custom-file-input" width="200px" id="customFile">
             <label class="custom-file-label" for="customFile">Choose file</label>
 
+  
+    </div>
+
+    <div *ngIf="!showMainContent2" id="postvids" class="form-group">
+        
+            <label for="exampleFormControlTextarea1">YouTube Id</label>
+            
+            <textarea name="vididpad" style="height: 40px;" class="form-control" id="videoid"></textarea>
+<br>
+            <input type="submit" style="padding-bottom: 10px; padding-top: 10px;" class="btn" value="Submit">
   
     </div>
 
@@ -86,6 +118,8 @@ Hello {{name}} <br/><span style="font-weight: bolder; color: crimson;">Member # 
      
 
         <app-youtubepost></app-youtubepost>
+
+
 
 
 </div>

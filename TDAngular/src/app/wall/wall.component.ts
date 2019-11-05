@@ -12,15 +12,36 @@ import { HttpClient } from '@angular/common/http';
 })
 export class WallComponent implements OnInit {
 
+  showMainContent: Boolean = true;
+
+  showMainContent1: Boolean = true;
+
+  showMainContent2: Boolean = true;
+
+
   constructor(private _activatedRoute: ActivatedRoute,
     private _router: Router,
     private http:HttpClient,
-    ) { }
+    ) {  }
 
 name : string = JSON.parse(sessionStorage.getItem("user")).username;
 myId: String = JSON.parse(sessionStorage.getItem("user")).user_id; 
   ngOnInit() {
   }
+  
+  ShowHideButton() {
+    this.showMainContent = this.showMainContent ? false : true;
+ }
+
+ ShowHideButton1() {
+  this.showMainContent1 = this.showMainContent1 ? false : true;
+}
+
+ShowHideButton2() {
+  this.showMainContent2 = this.showMainContent2 ? false : true;
+}
+  
+  
   getUser(){
   
   
