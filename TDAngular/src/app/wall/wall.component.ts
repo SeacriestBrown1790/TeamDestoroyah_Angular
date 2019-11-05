@@ -78,6 +78,22 @@ ShowHideButton2() {
     .catch(e => console.log(e));
     
   }
+
+  submissionUser(form: NgForm) {
+    this.http
+    .post("http://localhost:8080/TeamDestoroyah/users/getUsername.app", {
+      
+        username: form.value.username,
+        
+     
+    })
+    .toPromise()
+    .then((r: {username:string}) => {
+      console.log(r);
+    })
+    .catch(e => console.log(e));
+    
+  }
   currentDate(){
     let date = Date.now();
     console.log(date);
