@@ -60,7 +60,6 @@ export class RegisterComponent implements OnInit {
       
   }
 
-<<<<<<< HEAD
   onClickPhoto(): void{
     var x = document.getElementById("Post");
   if (x.style.display === "none") {
@@ -69,7 +68,6 @@ export class RegisterComponent implements OnInit {
     x.style.display = "none";
   }
 } 
-=======
     getAge(birthdate){
       console.log(Date.parse(birthdate));
       let timeDiff = Math.abs(Date.now() - Date.parse(birthdate));
@@ -78,7 +76,6 @@ export class RegisterComponent implements OnInit {
       console.log(age)
       return age;
     }
->>>>>>> dbdf8c44efdc43d984b8fa975c2a8dd35ae54c30
 
  
 
