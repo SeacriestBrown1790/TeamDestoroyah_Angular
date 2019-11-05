@@ -11,10 +11,17 @@ import { SlideshowModule} from 'ng-simple-slideshow';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-
+import { BackgrounduploadComponent } from './backgroundupload/backgroundupload.component';
+import { PostpicuploadComponent } from './postpicupload/postpicupload.component';
+import { ProfilepicuploadComponent } from './profilepicupload/profilepicupload.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './auth.service';
 
+import { YoutubePlayerModule } from 'ng2-youtube-player';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { YoutubepostComponent } from './youtubepost/youtubepost.component';
+import { NgxY2PlayerModule } from 'ngx-y2-player';
+import { UploadFileService } from './upload/upload-file.service';
 
 
 
@@ -29,6 +36,10 @@ import { AuthService } from './auth.service';
     RegisterComponent,
     routingComponents,
     LandingComponent,
+    BackgrounduploadComponent,
+    PostpicuploadComponent,
+    ProfilepicuploadComponent,
+    YoutubepostComponent,
 
     
   ],
@@ -40,8 +51,14 @@ import { AuthService } from './auth.service';
     AppRoutingModule,
     SlideshowModule,
     FormsModule,
+    YoutubePlayerModule,
+    NgxY2PlayerModule,
   ],
-  providers: [AuthService],
+  providers: [
+    AuthService,
+    UploadFileService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+platformBrowserDynamic().bootstrapModule(AppModule);

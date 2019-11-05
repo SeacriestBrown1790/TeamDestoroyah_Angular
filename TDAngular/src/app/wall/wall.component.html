@@ -24,7 +24,7 @@
 <div id="logo"></div>
         
 <div id="userplaceholder">
-Hello User
+Hello {{name}} <br/><span style="font-weight: bolder; color: crimson;">Member # {{myId}}</span>
 </div>   
 
 <div id="navsearch">
@@ -63,11 +63,32 @@ Hello User
         
             <label for="exampleFormControlTextarea1">Lets post something...(words)</label>
             
-            <textarea name="content" class="form-control" id="exampleFormControlTextarea1" ngModel></textarea>
+            <textarea name="content" class="form-control" id="content" ngModel></textarea>
 <br>
-<input type="submit" style="padding-bottom: 10px; padding-top: 10px;" class="btn" value="Submit">
+            <input type="submit" style="padding-bottom: 10px; padding-top: 10px;" class="btn" value="Submit">
         
         </div>
+        
+        <div id="postimage" class="form-group">
+        
+    
+            <input type="file" class="custom-file-input" width="200px" id="customFile">
+            <label class="custom-file-label" for="customFile">Choose file</label>
+
+  
+    </div>
+
+   
+
+    <div id="vid" >
+     
+        
+     
+
+        <app-youtubepost></app-youtubepost>
+
+
+</div>
     </form>   
 </div>
 

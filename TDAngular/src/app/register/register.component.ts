@@ -9,7 +9,18 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
+
+
 export class RegisterComponent implements OnInit {
+
+
+
+  
+
+
+
+ 
+
 
   constructor( private http:HttpClient,
     private _activatedRoute: ActivatedRoute,
@@ -20,20 +31,26 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  
+
   submission(form: NgForm) {
+    
+     
+
     this.http
       .post("http://localhost:8080/TeamDestoroyah/users/putIn.app", {
         username: form.value.username,
-        password: form.value.password,
+        userpass: form.value.userpass,
         age: form.value.age,
         gender: form.value.gender,
-        brithday: form.value.brithday,
+        birthday: form.value.birthday,
         firstname: form.value.firstname,
         lastname: form.value.lastname,
         email: form.value.email 
       })
       .toPromise()
-      .then((r: { username: string; password: string;age: number; gender: string; brithday: Date; firstname: string;lastname: string;email: string }) => {
+      .then((r: { username: string; userpass: string;age: number; gender: string; birthday: Date; firstname: string;lastname: string;email: string }) => {
         console.log(r);
         // sessionStorage.setItem("username", JSON.stringify(r));
         this.onRegisterButtonClick();
@@ -42,6 +59,10 @@ export class RegisterComponent implements OnInit {
       
       
   }
+
+    
+
+ 
 
   onRegisterButtonClick(): void{
     this._router.navigate(['login'])

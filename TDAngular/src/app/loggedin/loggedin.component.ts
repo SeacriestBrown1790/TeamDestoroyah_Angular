@@ -32,13 +32,13 @@ export class LoggedinComponent implements OnInit {
     this.http
       .post("http://localhost:8080/TeamDestoroyah/users/login.app", {
         email: form.value.email,
-        password: form.value.password,
+        userpass: form.value.userpass,
         
       })
       .toPromise()
-      .then((r: { email: string;password: string }) => {
+      .then((r: { email: string;userpass: string }) => {
         console.log(r);
-        sessionStorage.setItem("email", JSON.stringify(r));
+        sessionStorage.setItem("user", JSON.stringify(r));
         if(r!=null){
           this.onLogInButtonClick();
         }
