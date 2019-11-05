@@ -83,12 +83,22 @@ myId: String = JSON.parse(sessionStorage.getItem("user")).user_id;
     })
     .toPromise()
     .then((r: {}) => {
-      console.log(r);
+      // document.getElementById('huh').innerHTML+="test";
+      // console.log(r);
+      this.itsWut(r);
     })
-    .catch(e => document.getElementById('inc').innerHTML+=e);
+    .catch(e =>  console.log(e));
+    
     
   }
 
+  itsWut(obj){
+    for(let product of obj){
+      console.log(product.content+" "+product.date);
+      
+    }
+    }
+  
 
   
 
