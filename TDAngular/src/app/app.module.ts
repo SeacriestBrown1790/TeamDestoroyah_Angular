@@ -22,6 +22,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { YoutubepostComponent } from './youtubepost/youtubepost.component';
 import { NgxY2PlayerModule } from 'ngx-y2-player';
 import { UploadFileService } from './upload/upload-file.service';
+import { PostloggedinComponent } from './postloggedin/postloggedin.component';
 
 
 
@@ -40,6 +41,7 @@ import { UploadFileService } from './upload/upload-file.service';
     PostpicuploadComponent,
     ProfilepicuploadComponent,
     YoutubepostComponent,
+    PostloggedinComponent,
 
     
   ],

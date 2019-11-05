@@ -130,12 +130,14 @@ ShowHideButton2() {
   }
 
   itsWut(obj){
-    for(let product of obj){
-      console.log(product.content+" "+product.date);
-      
-    }
-    }
   
+    for(let product of obj){
+     let x = product.content+" "+product.date;
+    	
+     document.getElementById("tickets").innerHTML = x; 
+     
+     }
+    }
 
   
 
