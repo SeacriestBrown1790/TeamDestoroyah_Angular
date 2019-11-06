@@ -44,12 +44,12 @@ Hello {{name}} <br/><span style="font-weight: bolder; color: crimson;">Member # 
     </div>
     </div>   
 
-<!--Wall area-->
+
 
 <div id="wall">
-    
+ <!--Wall  
 <div id="wallprofilesection">
-
+   
     <div id="profilebanner">
 
         <div id="userpic">
@@ -59,7 +59,7 @@ Hello {{name}} <br/><span style="font-weight: bolder; color: crimson;">Member # 
     </div>
 
 </div>
-
+area-->
 <div id="wallpostsection">
 
         <div id="postwords" class="form-group">
@@ -81,7 +81,7 @@ Hello {{name}} <br/><span style="font-weight: bolder; color: crimson;">Member # 
             </div>
 
 
-    <form #serv=ngForm (ngSubmit)="submission(serv)">
+    <form #serv=ngForm (ngSubmit)="submission(serv); ShowHideButton(); ">
         
         
         <div *ngIf="!showMainContent" id="postwords" class="form-group">
@@ -93,7 +93,10 @@ Hello {{name}} <br/><span style="font-weight: bolder; color: crimson;">Member # 
             <input type="submit" style="padding-bottom: 10px; padding-top: 10px;" class="btn" value="Submit">
         
         </div>
-        
+   <!-- </form>
+    
+    <form #serv=ngForm (ngSubmit)="vidSubmission(serv); ShowHideButton(); "> 
+        -->    
         <div *ngIf="!showMainContent1" id="postimage" class="form-group">
         
     
@@ -107,19 +110,17 @@ Hello {{name}} <br/><span style="font-weight: bolder; color: crimson;">Member # 
         
             <label for="exampleFormControlTextarea1">YouTube Id</label>
             
-            <textarea name="vididpad" style="height: 40px;" class="form-control" id="videoid"></textarea>
+            <textarea name="videoname" style="height: 40px;" class="form-control" id="videoname" ngModel></textarea>
+            <textarea name="videocode" style="height: 40px;" class="form-control" id="videocode" ngModel></textarea>
 <br>
             <input type="submit" style="padding-bottom: 10px; padding-top: 10px;" class="btn" value="Submit">
   
     </div>
 
    
-   <div id="inc">
-    where is this?
+ 
 
-   </div>
-
-   <div style="background-color: crimson; height: 200px;" id="tickets" (click)='itsWut(obj)'><h1>Hello</h1></div>   
+   <div id="tickets" (click)='itsWut(obj)'><h1>Hello</h1></div>   
 
     <div id="vid" >
      
