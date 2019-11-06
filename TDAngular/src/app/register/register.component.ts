@@ -42,7 +42,7 @@ export class RegisterComponent implements OnInit {
       .post("http://localhost:8080/TeamDestoroyah/users/putIn.app", {
         username: form.value.username,
         userpass: form.value.userpass,
-        age: form.value.age,
+        age: this.getAge(form.value.birthday),
         gender: form.value.gender,
         birthday: form.value.birthday,
         firstname: form.value.firstname,
@@ -60,7 +60,22 @@ export class RegisterComponent implements OnInit {
       
   }
 
-    
+  onClickPhoto(): void{
+    var x = document.getElementById("Post");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+} 
+    getAge(birthdate){
+      console.log(Date.parse(birthdate));
+      let timeDiff = Math.abs(Date.now() - Date.parse(birthdate));
+      console.log(timeDiff);
+      let age = Math.floor((timeDiff / (1000 * 3600 * 24))/365.25);
+      console.log(age)
+      return age;
+    }
 
  
 
