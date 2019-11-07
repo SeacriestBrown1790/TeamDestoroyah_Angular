@@ -3,8 +3,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Observable, interval, Subscription } from 'rxjs';
-import { headersToString } from 'selenium-webdriver/http';
-import  * as AWS from 'aws-sdk';
 
 
 @Component({
@@ -16,7 +14,7 @@ import  * as AWS from 'aws-sdk';
 
 export class WallComponent implements OnInit {
 
-  private updateSubscription: Subscription;
+
 
   
   showMainContent: Boolean = true;
@@ -24,6 +22,9 @@ export class WallComponent implements OnInit {
   showMainContent1: Boolean = true;
 
   showMainContent2: Boolean = true;
+
+
+  showMainContent3: Boolean = true;
 
 
   constructor(private _activatedRoute: ActivatedRoute,
@@ -39,10 +40,10 @@ myId: string = JSON.parse(sessionStorage.getItem("user")).user_id;
 
 
 
-
   ngOnInit() {
 
   
+
 
     this.getMyPosts();
   }
@@ -60,7 +61,9 @@ ShowHideButton2() {
   this.showMainContent2 = this.showMainContent2 ? false : true;
 }
   
-  
+ShowHideButton3() {
+  this.showMainContent3 = this.showMainContent3 ? false : true;
+} 
   getUser(){
     let user = {
   user_id: JSON.parse(sessionStorage.getItem("user")).user_id,
@@ -79,6 +82,8 @@ buttonClick() {
   this.router.navigateByUrl('app-wall');
 
 }
+
+
 submissionPic(form: NgForm) {
   this.http
   .post("http://localhost:8080/TeamDestoroyah/photos/getAll.app", {
@@ -101,24 +106,6 @@ submissionPic(form: NgForm) {
   })
   .catch(e => console.log(e));
 }
-
-myCtrl($scope) {    
-  AWS.config.update({
-accessKeyId: 'AKIA34DHIUGQ5EV7HXWA', secretAccessKey: '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'});
-  AWS.config.region = "us-east-2";
-
-let bucket = new AWS.S3();
-
-  bucket.getObject({Bucket: "cloud.monsterparty.com", Key: "fartman0.5025455805794254.jpeg"},function(err,file){
-
-})};
-
-//  encode(data)
-// {
-//   var str = data.reduce(function(a,b){ return a+String.fromCharCode(b) },'');
-//   return btoa(str).replace(/.{76}(?=.)/g,'$&\n');
-// }
-
 selectPhoto(obj, id){
   for(let huh of obj ){
     console.log(huh);
@@ -129,8 +116,6 @@ selectPhoto(obj, id){
   }
 
 }
-
-  
   submission(form: NgForm) {
     this.http
     .post("http://localhost:8080/TeamDestoroyah/users/postIn.app", {
@@ -295,43 +280,6 @@ selectPhoto(obj, id){
     sessionStorage.clear();
   }
 
-  submissionUpdate(form: NgForm) {
-    this.http
-    .post("http://localhost:8080/TeamDestoroyah/users/update.app", {
-      
-      
-      userpass: form.value.userpass,
-      user_id: JSON.parse(sessionStorage.getItem("user")).user_id,
-      firstname: JSON.parse(sessionStorage.getItem("user")).firstname,
-      lastname: JSON.parse(sessionStorage.getItem("user")).lastname,
-      username: JSON.parse(sessionStorage.getItem("user")).username,
-      age: JSON.parse(sessionStorage.getItem("user")).age,
-      birthday: JSON.parse(sessionStorage.getItem("user")).birthday,
-      gender: JSON.parse(sessionStorage.getItem("user")).gender,
-      email: JSON.parse(sessionStorage.getItem("user")).email,
-      post: JSON.parse(sessionStorage.getItem("user")).post,
-     
-    })
-    .toPromise()
-    .then((r: {username: string; userpass: string;age: number; gender: string; birthday: Date; firstname: string;lastname: string;email: string}) => {
-      console.log(r);
-      form.reset();
-      // this.ngOnInit();
-      this.getMyPosts();
-    })
-    .catch(e => console.log(e));
-    
   
-  }
 
-
- 
-
-//   ngOnDestroy() {
-//     this.updateSubscription.unsubscribe();
-// }
-
-// private updateStats() {
-//     console.log('I am doing something every second');
-// }
 }

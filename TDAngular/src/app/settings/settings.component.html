@@ -1,0 +1,87 @@
+<div id="updatecontainer">
+
+<form #serv=ngForm (ngSubmit)="submissionUpdate(serv)">
+    <div id="loginleft">
+        <h1 style="margin: 16px" class="login text-white">Update Info</h1>
+    
+    
+    
+            <div class="form-group col-xs-2 text-white">
+              <label for="username">User Name</label>
+              <input (click)="changeColor()" type="text" style="max-width: 250px;" class="lines form-control col-xs-2" id="username" aria-describedby="usernameHelp" required placeholder="Enter username"  name="username" ngModel>
+              <small id="usernameHelp" class="form-text text-muted">Go for something NEW!</small>
+            </div>
+    
+            <div class="form-group col-xs-2 text-white">
+                <label for="firstname">First Name</label>
+                <input (click)="changeColor1()" type="text" style="max-width: 250px;" class="form-control col-xs-2 lines" id="firstName" aria-describedby="firstHelp" placeholder="Enter your name" name="firstname" ngModel>
+                
+              </div>
+    
+            <div class="form-group col-xs-2 text-white">
+                <label for="lastname">Last Name</label>
+                <input (click)="changeColor2()" type="text" style="max-width: 250px;" class="form-control col-xs-2 lines" id="lastname" placeholder="Last name" name="lastname" ngModel>
+                
+              </div>  
+    
+              <div class="form-group text-white">
+                <label for="exampleSelect1">Example select</label>
+                <select (click)="changeColor4()"  class="form-control lines" id="gender" name="gender" ngModel>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Other</option>
+                
+                </select>
+              </div>
+            
+           
+        
+    
+    </div>
+    <div id="loginright">
+        <div class="form-group col-xs-2 text-white">
+            <label for="exampleInputEmail1">Birth Day</label>
+            <input type="date" style="max-width: 250px;" class="form-control col-xs-2 lines" (click)="changeColor5()" id="birthday"  placeholder="Enter Birthday" name="birthday" ngModel>
+           
+    
+    
+          </div>
+    
+    
+    
+          <div class="form-group col-xs-2 text-white">
+            <label for="exampleInputEmail">Email address</label>
+            <input (click)="changeColor7()" type="email" style="max-width: 250px;" class="form-control col-xs-2 lines" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" ngModel>
+            <small id="emailHelp" class="form-text text-muted">We'll never share it, and you know it!</small>
+          </div>
+    
+          <div class="form-group col-xs-2 text-white">
+            <label for="exampleInputPassword1">Password</label>
+            <input (click)="changeColor3()" style="max-width: 250px;" type="password" required class="form-control col-xs-2 lines" id="userpass" placeholder="Password" name="userpass" ngModel>
+          </div>
+       
+     
+                <p></p><br>
+    
+                <div class="button_container" style="z-index: 2;" >
+    
+           
+    
+                  <button class="btn" style="width: 190px; margin-top: 260px; margin-left: 50px;"><span>
+                    
+                    <input (click)="ShowHideButton5()" type="submit" 
+                    class="text-white"
+                     value="Update" style="background-color: transparent; border: none"
+                    ></span>
+                
+                </button>
+          
+              </div>
+                
+             
+        
+        </div>
+    
+    </form>
+
+</div>
