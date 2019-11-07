@@ -185,14 +185,14 @@ selectPhoto(obj, id){
 
   submissionUser(form: NgForm) {
     this.http
-    .post("http://localhost:8080/TeamDestoroyah/users/getUsername.app", {
+    .post("http://localhost:8080/TeamDestoroyah/users/getId.app", {
       
-        username: form.value.username,
+        id: form.value.username,
         
      
     })
     .toPromise()
-    .then((r: {username:string}) => {
+    .then((r: {id:number}) => {
       console.log(r);
 
     })
