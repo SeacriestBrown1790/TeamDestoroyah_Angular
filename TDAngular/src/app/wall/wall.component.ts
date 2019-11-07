@@ -4,7 +4,7 @@ import { NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Observable, interval, Subscription } from 'rxjs';
 import { headersToString } from 'selenium-webdriver/http';
-import  * as AWS from 'aws-sdk';
+// import  * as AWS from 'aws-sdk';
 
 
 @Component({
@@ -46,10 +46,6 @@ myId: string = JSON.parse(sessionStorage.getItem("user")).user_id;
   ngOnInit() {
 
   
-<<<<<<< HEAD
-
-=======
->>>>>>> willbranch
 
     this.getMyPosts();
   }
@@ -111,16 +107,16 @@ submissionPic(form: NgForm) {
   .catch(e => console.log(e));
 }
 
-myCtrl($scope) {    
-  AWS.config.update({
-accessKeyId: 'AKIA34DHIUGQ5EV7HXWA', secretAccessKey: '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'});
-  AWS.config.region = "us-east-2";
+// myCtrl($scope) {    
+//   AWS.config.update({
+// accessKeyId: 'AKIA34DHIUGQ5EV7HXWA', secretAccessKey: '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'});
+//   AWS.config.region = "us-east-2";
 
-let bucket = new AWS.S3();
+// let bucket = new AWS.S3();
 
-  bucket.getObject({Bucket: "cloud.monsterparty.com", Key: "fartman0.5025455805794254.jpeg"},function(err,file){
+//   bucket.getObject({Bucket: "cloud.monsterparty.com", Key: "fartman0.5025455805794254.jpeg"},function(err,file){
 
-})};
+// })};
 
 //  encode(data)
 // {
@@ -336,17 +332,7 @@ selectPhoto(obj, id){
 
  
 
-<<<<<<< HEAD
 
 
 
-=======
-//   ngOnDestroy() {
-//     this.updateSubscription.unsubscribe();
-// }
-
-// private updateStats() {
-//     console.log('I am doing something every second');
-// }
->>>>>>> willbranch
 }
