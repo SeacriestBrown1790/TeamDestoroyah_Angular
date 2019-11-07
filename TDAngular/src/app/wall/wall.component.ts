@@ -240,7 +240,7 @@ buttonClick() {
 
 
   onExitButtonClick(): void{
-    this._router.navigate(['landing'])
+    this._router.navigate(['logoutmessage'])
     sessionStorage.clear();
   }
 

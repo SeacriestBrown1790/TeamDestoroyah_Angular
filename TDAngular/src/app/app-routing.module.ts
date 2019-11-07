@@ -4,6 +4,7 @@ import { WallComponent } from './wall/wall.component';
 import { LandingComponent } from './landing/landing.component';
 import { LoggedinComponent } from './loggedin/loggedin.component';
 import { RegisterComponent } from './register/register.component';
+import { LogoutMessageComponent } from './logout-message/logout-message.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,8 @@ const routes: Routes = [
 { path: 'register', component: RegisterComponent},
 
 {path: 'landing', component: LandingComponent},
+
+{ path: 'logoutmessage', component: LogoutMessageComponent},
 
 ];
 
