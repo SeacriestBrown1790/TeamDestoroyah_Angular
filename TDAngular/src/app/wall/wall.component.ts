@@ -16,7 +16,7 @@ import { headersToString } from 'selenium-webdriver/http';
 
 export class WallComponent implements OnInit {
 
-  private updateSubscription: Subscription;
+
 
   
   showMainContent: Boolean = true;
@@ -24,6 +24,9 @@ export class WallComponent implements OnInit {
   showMainContent1: Boolean = true;
 
   showMainContent2: Boolean = true;
+
+
+  showMainContent3: Boolean = true;
 
 
   constructor(private _activatedRoute: ActivatedRoute,
@@ -60,7 +63,9 @@ ShowHideButton2() {
   this.showMainContent2 = this.showMainContent2 ? false : true;
 }
   
-  
+ShowHideButton3() {
+  this.showMainContent3 = this.showMainContent3 ? false : true;
+} 
   getUser(){
     let user = {
   user_id: JSON.parse(sessionStorage.getItem("user")).user_id,
@@ -329,11 +334,7 @@ selectPhoto(obj, id){
 
  
 
-//   ngOnDestroy() {
-//     this.updateSubscription.unsubscribe();
-// }
 
-// private updateStats() {
-//     console.log('I am doing something every second');
-// }
+
+
 }
