@@ -39,13 +39,10 @@ export class WallComponent implements OnInit {
 
 name : string = JSON.parse(sessionStorage.getItem("user")).username;
 myId: string = JSON.parse(sessionStorage.getItem("user")).user_id; 
-
+username :  string = JSON.parse(sessionStorage.getItem("user")).username;
 
 
   ngOnInit() {
-
-  
-
 
     this.getMyPosts();
   }

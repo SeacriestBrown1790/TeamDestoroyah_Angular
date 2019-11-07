@@ -58,8 +58,11 @@ Hello {{name}} <br/><span style="font-weight: bolder; color: crimson;">Member # 
 <div id="wallprofilesection">
    
     <div id="profilebanner">
-       
-        <div id="userpic">
+            <!-- "https://s3.us-east-2.amazonaws.com/cloud.monsterparty.com/{{username}}.jpeg" -->
+        <div id="userpic" >
+            <img src=  "https://s3.us-east-2.amazonaws.com/cloud.monsterparty.com/{{username}}.jpeg"/>
+
+
 
         </div>
 
@@ -67,10 +70,11 @@ Hello {{name}} <br/><span style="font-weight: bolder; color: crimson;">Member # 
 
 </div>
 area
+<!-- background-image:url('https://wallpaperstock.net/wallpapers/thumbs1/43576hd.jpg'); -->
 
 <div id="wallpostsection">
 <div *ngIf="!showMainContent3"  id="postwords" style="height: auto; background-color: darkblue;background-attachment: fixed;
-background-image:url('https://wallpaperstock.net/wallpapers/thumbs1/43576hd.jpg');
+background-image:url('https://s3.us-east-2.amazonaws.com/cloud.monsterparty.com/{{username}}.jpeg');
 background-size: auto 1000px;
 background-position: 48% 36%;
 border-radius: 20px;"> <app-settings></app-settings></div>

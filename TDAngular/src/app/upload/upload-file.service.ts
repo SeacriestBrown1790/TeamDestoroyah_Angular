@@ -16,7 +16,7 @@ export class UploadFileService {
     
     formdata.append('file', file);
 
-    formdata.append('name',JSON.parse(sessionStorage.getItem("user")).username+this.random());
+    formdata.append('name',JSON.parse(sessionStorage.getItem("user")).username);
     formdata.append('userid',JSON.parse(sessionStorage.getItem("user")).user_id);
 
     
