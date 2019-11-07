@@ -3,6 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Observable, interval, Subscription } from 'rxjs';
+import { headersToString } from 'selenium-webdriver/http';
+// import  * as AWS from 'aws-sdk';
 
 
 @Component({
@@ -106,6 +108,24 @@ submissionPic(form: NgForm) {
   })
   .catch(e => console.log(e));
 }
+
+// myCtrl($scope) {    
+//   AWS.config.update({
+// accessKeyId: 'AKIA34DHIUGQ5EV7HXWA', secretAccessKey: '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'});
+//   AWS.config.region = "us-east-2";
+
+// let bucket = new AWS.S3();
+
+//   bucket.getObject({Bucket: "cloud.monsterparty.com", Key: "fartman0.5025455805794254.jpeg"},function(err,file){
+
+// })};
+
+//  encode(data)
+// {
+//   var str = data.reduce(function(a,b){ return a+String.fromCharCode(b) },'');
+//   return btoa(str).replace(/.{76}(?=.)/g,'$&\n');
+// }
+
 selectPhoto(obj, id){
   for(let huh of obj ){
     console.log(huh);
@@ -122,15 +142,17 @@ selectPhoto(obj, id){
       
         content: form.value.content,
         
+        
         date: this.currentDate(),
         
-      user: JSON.parse(sessionStorage.getItem("user")),
+      user: JSON.parse(sessionStorage.getItem("user")), 
      
     })
     .toPromise()
     .then((r: {content:string;date:Date;user:object}) => {
+      console.log(r.content);
       console.log(r);
-      form.reset();
+      // form.reset();
       // this.ngOnInit();
       this.getMyPosts();
     })
@@ -279,7 +301,5 @@ selectPhoto(obj, id){
     this._router.navigate(['landing'])
     sessionStorage.clear();
   }
-
-  
 
 }

@@ -66,6 +66,7 @@ Hello {{name}} <br/><span style="font-weight: bolder; color: crimson;">Member # 
     </div>
 
 </div>
+area
 
 <div id="wallpostsection">
 <div *ngIf="!showMainContent3"  id="postwords" style="height: auto; background-color: darkblue;background-attachment: fixed;
@@ -91,23 +92,24 @@ border-radius: 20px;"> <app-settings></app-settings></div>
     
             </div>
 
-
-    <form #serv=ngForm (ngSubmit)="submission(serv); ShowHideButton(); ">
+            <!-- ShowHideButton(); -->
+    <form #serv=ngForm (ngSubmit)="submission(serv) ">
         
-        
-        <div *ngIf="!showMainContent" id="postwords" class="form-group">
+        <!-- *ngIf="!showMainContent"  -->
+        <div id="postwords" class="form-group">
         
             <label for="exampleFormControlTextarea1">Lets post something...(words)</label>
+            
             
             <textarea name="content" class="form-control" id="content" ngModel></textarea>
 <br>
             <input type="submit" style="padding-bottom: 10px; padding-top: 10px;" class="btn" value="Submit">
         
         </div>
-   <!-- </form>
+    </form>
     
     <form #serv=ngForm (ngSubmit)="vidSubmission(serv); ShowHideButton(); "> 
-        -->    
+           
         <div *ngIf="!showMainContent1" id="postimage" class="form-group">
         
     
