@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UploadFileService } from '../upload/upload-file.service';
 import { HttpResponse, HttpEventType } from '@angular/common/http';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'profilepicupload',
@@ -12,7 +13,9 @@ export class ProfilepicuploadComponent implements OnInit {
   currentFileUpload: File;
   progress: { percentage: number } = { percentage: 0 };
 
-  constructor(private uploadService: UploadFileService) { }
+  constructor(private uploadService: UploadFileService,
+    private _activatedRoute: ActivatedRoute,
+    private _router: Router) { }
 
   ngOnInit() {
   }

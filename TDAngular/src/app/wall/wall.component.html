@@ -35,7 +35,7 @@ Hello {{name}} <br/><span style="font-weight: bolder; color: crimson;">Member # 
           <span class="input-group-text" id="basic-addon1"></span>
        
         
-          <input type="text" id=username class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+          <input type="text" id="username" name="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
           <input type="submit" style="padding-bottom: 10px; padding-top: 10px;" class="btn" value="Submit">
 
         </div>
@@ -47,19 +47,19 @@ Hello {{name}} <br/><span style="font-weight: bolder; color: crimson;">Member # 
 
 
 <div id="wall">
- <!--Wall  
+ Wall  
 <div id="wallprofilesection">
    
     <div id="profilebanner">
 
-        <div id="userpic">
-
+        <div id="userpic" style="background-image:url('{{urlpic}}'); background-size: auto auto;">
+            <h1>{{urlpic}}looking over here today is the day</h1>
         </div>
 
     </div>
 
 </div>
-area-->
+area
 <div id="wallpostsection">
 
         <div id="postwords" class="form-group">
@@ -122,12 +122,42 @@ area-->
 
    <div id="tickets" (click)='itsWut(obj)'><h1>Hello</h1></div>   
 
+   <!-- <div id="temp">
+
+    <form class="form-inline-block" #serv=ngForm (ngSubmit)="submissionUpdate(serv)">
+     
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1"></span>
+       
+        
+          <input type="text" id="userpass" name="userpass" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" ngModel>
+          <input type="submit" style="padding-bottom: 10px; padding-top: 10px;" class="btn" value="Submit">
+
+        </div>
+    </form>
+    </div> -->
+    <div id="temp">
+
+        <form class="form-inline-block" #serv=ngForm (ngSubmit)="submissionPic(serv)">
+         
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">enter id for pic</span>
+           
+            
+              <input type="number" id="userpass" name="id" class="form-control" placeholder="id" aria-label="Password" aria-describedby="basic-addon1" ngModel>
+              <input type="submit" style="padding-bottom: 10px; padding-top: 10px;" class="btn" value="Submit">
+    
+            </div>
+        </form>
+        </div>
+    
+
     <div id="vid" >
      
         
 
         <app-youtubepost></app-youtubepost>
-
+        <profilepicupload></profilepicupload>
 
 
 

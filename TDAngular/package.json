@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~8.2.11",
     "@angular/router": "~8.2.11",
     "@ng-bootstrap/ng-bootstrap": "^5.1.2",
+    "aws-sdk": "^2.566.0",
     "ng-simple-slideshow": "^1.2.9",
     "ng2-youtube-player": "0.0.31",
     "ngx-y2-player": "^3.0.1",
