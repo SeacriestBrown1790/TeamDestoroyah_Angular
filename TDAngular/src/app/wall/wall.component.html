@@ -3,9 +3,10 @@
 
     
     <p></p><br>
+   
     <div class="button_container">
        
-        <button (click)="onSettingsButtonClick()" class="btn"><span>Settings</span></button>
+        <button (click)="ShowHideButton3()" class="btn"><span>Settings</span></button>
      
     </div>
     <p></p><br>
@@ -47,11 +48,11 @@ Hello {{name}} <br/><span style="font-weight: bolder; color: crimson;">Member # 
 
 
 <div id="wall">
- <!--Wall  
+
 <div id="wallprofilesection">
    
     <div id="profilebanner">
-
+       
         <div id="userpic">
 
         </div>
@@ -59,9 +60,13 @@ Hello {{name}} <br/><span style="font-weight: bolder; color: crimson;">Member # 
     </div>
 
 </div>
-area-->
-<div id="wallpostsection">
 
+<div id="wallpostsection">
+<div *ngIf="!showMainContent3"  id="postwords" style="height: auto; background-color: darkblue;background-attachment: fixed;
+background-image:url('https://wallpaperstock.net/wallpapers/thumbs1/43576hd.jpg');
+background-size: auto 1000px;
+background-position: 48% 36%;
+border-radius: 20px;"> <app-settings></app-settings></div>
         <div id="postwords" class="form-group">
 
                 <input type="submit" style="padding-bottom: 10px; padding-top: 10px; display: inline-block; width: 100%;

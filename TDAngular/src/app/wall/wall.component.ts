@@ -14,7 +14,7 @@ import { Observable, interval, Subscription } from 'rxjs';
 
 export class WallComponent implements OnInit {
 
-  private updateSubscription: Subscription;
+
 
   
   showMainContent: Boolean = true;
@@ -22,6 +22,9 @@ export class WallComponent implements OnInit {
   showMainContent1: Boolean = true;
 
   showMainContent2: Boolean = true;
+
+
+  showMainContent3: Boolean = true;
 
 
   constructor(private _activatedRoute: ActivatedRoute,
@@ -39,10 +42,8 @@ myId: string = JSON.parse(sessionStorage.getItem("user")).user_id;
 
   ngOnInit() {
 
-    this.updateSubscription = interval(100).subscribe(
-      (val) => { this.updateStats()
-    }
-);
+  
+
 
     this.getMyPosts();
   }
@@ -60,7 +61,9 @@ ShowHideButton2() {
   this.showMainContent2 = this.showMainContent2 ? false : true;
 }
   
-  
+ShowHideButton3() {
+  this.showMainContent3 = this.showMainContent3 ? false : true;
+} 
   getUser(){
     let user = {
   user_id: JSON.parse(sessionStorage.getItem("user")).user_id,
@@ -246,11 +249,7 @@ buttonClick() {
 
  
 
-  ngOnDestroy() {
-    this.updateSubscription.unsubscribe();
-}
 
-private updateStats() {
-    console.log('I am doing something every second');
-}
+
+
 }
